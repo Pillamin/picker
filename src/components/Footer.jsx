@@ -11,7 +11,7 @@ export default function Footer({ onOpenTerms, onOpenPrivacy }) {
         </div>
         <div className="footer-copyright">
           <p>ⓒ 2026 발표자뽑기. All rights reserved.</p>
-          <p>정보관리책임자: 담임 교사</p>
+          <p>정보관리책임자: 김상륜 (신방학중학교)</p>
         </div>
       </div>
     </footer>
