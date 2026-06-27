@@ -3,6 +3,8 @@ import EthicsGate from './components/EthicsGate';
 import StudentManager from './components/StudentManager';
 import PresenterDrawer from './components/PresenterDrawer';
 import TeacherSettings from './components/TeacherSettings';
+import Footer from './components/Footer';
+import PolicyModal from './components/PolicyModal';
 
 // Default mock students to give the app a ready-to-test feel on first run
 const DEFAULT_STUDENTS = {
@@ -67,6 +69,10 @@ export default function App() {
 
   // Hidden corner trigger click counter
   const [cornerClicks, setCornerClicks] = useState(0);
+
+  // Policy Modal state
+  const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
+  const [policyModalType, setPolicyModalType] = useState('terms');
 
   // Sync students data to localStorage when it changes
   useEffect(() => {
@@ -238,6 +244,19 @@ export default function App() {
         students={currentStudentsList}
         riggedQueue={riggedQueue}
         setRiggedQueue={setRiggedQueue}
+      />
+
+      {/* 6. Footer */}
+      <Footer 
+        onOpenTerms={() => { setPolicyModalType('terms'); setIsPolicyModalOpen(true); }}
+        onOpenPrivacy={() => { setPolicyModalType('privacy'); setIsPolicyModalOpen(true); }}
+      />
+
+      {/* 7. Policy Modal */}
+      <PolicyModal 
+        isOpen={isPolicyModalOpen}
+        onClose={() => setIsPolicyModalOpen(false)}
+        type={policyModalType}
       />
     </div>
   );

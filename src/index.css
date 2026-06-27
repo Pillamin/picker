@@ -881,3 +881,124 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 }
+
+/* Footer Styles */
+.app-footer {
+  background: rgba(15, 23, 42, 0.85);
+  border-top: 1px solid var(--border-color);
+  padding: 24px;
+  text-align: center;
+  backdrop-filter: var(--glass-blur);
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-link-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.footer-link-btn:hover {
+  color: var(--text-primary);
+  text-decoration-color: var(--text-primary);
+}
+
+.footer-divider {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-copyright {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Policy Modal Styles */
+.policy-modal-content {
+  max-width: 700px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+}
+
+.policy-body {
+  padding: 0 24px 24px;
+  overflow-y: auto;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.policy-h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.policy-h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.policy-hr {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 24px 0;
+}
+
+.policy-p {
+  margin-bottom: 12px;
+}
+
+.policy-list-item {
+  margin-bottom: 8px;
+  padding-left: 12px;
+}
+
+.policy-li {
+  margin-left: 24px;
+  margin-bottom: 4px;
+}
+
+.policy-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(30, 41, 59, 0.5);
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+}
